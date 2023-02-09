@@ -6,7 +6,7 @@ class Converter {
     double kilo = 0.05;
 
     double convertToKm(int steps) {
-        double km = steps * lengthStep ;
+        double km =  steps * lengthStep ;
         return km;
     }
     double convertStepsToKilocalories(int steps){
