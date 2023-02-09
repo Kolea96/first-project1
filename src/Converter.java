@@ -10,10 +10,10 @@ class Converter {
 
         return (int) km;
     }
-    double convertStepsToKilocalories(int steps){
+    int convertStepsToKilocalories(int steps){
         double kilokal = steps * kilo ;
 
-        return kilokal;
+        return (int) kilokal;
     }
 }
 

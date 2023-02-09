@@ -32,22 +32,21 @@ class MonthData {
     int bestSeries(int goalByStepsPerDay) {
         int bestSession = 0;
         int countBest = 0;
-        for (int i = 0; i < 30; i++) {
-
-
-            if ( days[i] > goalByStepsPerDay) {
-
-                    bestSession = bestSession + 1;// поиск максимальной серии
-                }  else {
-                bestSession = 0 ;
-
-            } if (bestSession > countBest){
-                countBest = bestSession;
+        for (int steps : days) {
+            if (steps >= goalByStepsPerDay) {
+                if (++countBest > bestSession) {
+                    bestSession = countBest;
+                } else {
+                    countBest = 0;
+                }
             }
         }
-        return countBest;
+        return bestSession;
     }
 }
+
+
+
 
 
 
